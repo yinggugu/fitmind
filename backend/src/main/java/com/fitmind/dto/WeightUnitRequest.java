@@ -1,0 +1,1 @@
+package com.fitmind.dto; import com.fitmind.enums.WeightUnit; import lombok.Data; import javax.validation.constraints.NotNull; @Data public class WeightUnitRequest { @NotNull private WeightUnit preferredWeightUnit; }

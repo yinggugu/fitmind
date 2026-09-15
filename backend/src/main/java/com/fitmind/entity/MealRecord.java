@@ -1,0 +1,3 @@
+package com.fitmind.entity;
+import com.baomidou.mybatisplus.annotation.*; import com.fitmind.enums.*; import lombok.Data; import java.math.BigDecimal; import java.time.*;
+@Data @TableName("meal_record") public class MealRecord { @TableId(type=IdType.AUTO) private Long id; private Long userId; private LocalDate recordDate; @EnumValue private MealType mealType; private String foodName; private String portionDescription; private BigDecimal caloriesKcal; private BigDecimal proteinG; private BigDecimal carbohydrateG; private BigDecimal fatG; private Boolean estimated; @EnumValue private SourceType sourceType; private String imageUrl; private LocalDateTime createdAt; private LocalDateTime updatedAt; }

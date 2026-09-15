@@ -1,0 +1,2 @@
+package com.fitmind.controller; import com.fitmind.common.Result; import com.fitmind.service.DashboardService; import com.fitmind.vo.DashboardOverviewVO; import lombok.RequiredArgsConstructor; import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/api/dashboard") @RequiredArgsConstructor public class DashboardController { private final DashboardService service; @GetMapping("/overview") public Result<DashboardOverviewVO> overview(){return Result.ok(service.overview());} }

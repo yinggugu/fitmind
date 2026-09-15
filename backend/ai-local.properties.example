@@ -1,0 +1,14 @@
+# Copy this file to ai-local.properties for local development.
+# Never commit ai-local.properties or replace these placeholders with real secrets.
+
+spring.datasource.password=YOUR_MYSQL_PASSWORD
+
+# Text model used by LangChain4j Tool Calling and health-letter generation.
+fitmind.qwen.api-key=YOUR_API_KEY
+fitmind.qwen.base-url=https://YOUR_WORKSPACE_HOST/compatible-mode/v1
+fitmind.qwen.model=YOUR_TEXT_MODEL
+
+# Multimodal model used by food-image recognition.
+fitmind.mimo.api-key=YOUR_API_KEY
+fitmind.mimo.base-url=https://YOUR_WORKSPACE_HOST/compatible-mode/v1
+fitmind.mimo.model=YOUR_VISION_MODEL

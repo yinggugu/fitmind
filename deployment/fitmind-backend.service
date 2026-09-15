@@ -1,0 +1,18 @@
+[Unit]
+Description=FitMind Spring Boot Backend
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=fitmind
+Group=fitmind
+WorkingDirectory=/opt/fitmind/backend
+ExecStart=/usr/bin/java -jar /opt/fitmind/backend/fitmind-backend.jar
+SuccessExitStatus=143
+Restart=on-failure
+RestartSec=5
+Environment=TZ=Asia/Shanghai
+EnvironmentFile=-/opt/fitmind/config/fitmind.env
+
+[Install]
+WantedBy=multi-user.target

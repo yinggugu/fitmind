@@ -1,0 +1,56 @@
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+**/target/
+**/.m2-repository/
+backend/maven-settings.xml
+
+# Node / Vite
+**/node_modules/
+**/dist/
+frontend/legacy-dist-backup/
+frontend/preview-check/
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.coverage
+python-data/.packages/
+python-data/reports/
+
+# Local secrets and runtime configuration
+.env
+.env.*
+!.env.example
+**/application-local.*
+!**/application-local.example.yml
+!**/application-local.example.properties
+**/ai-local.properties
+!**/ai-local.properties.example
+
+# Logs, runtime files and temporary output
+*.log
+*.pid
+tmp/
+logs/
+
+# Private course documents and local artifact generators
+/FitMind软件需求规格说明书.docx
+/~$*.docx
+/backend/generate_course_artifacts.py
+
+# Database scripts, exports and backups are not part of the public repository
+*.sql
+backups/
+database-export/
+*.dump
+*.bak
+*.sql.gz
+*_dump.sql
+*-dump.sql

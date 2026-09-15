@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  config:
+    import: optional:file:./ai-local.properties
+  application:
+    name: fitmind
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${FITMIND_DB_URL:jdbc:mysql://127.0.0.1:3306/fitmind?useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_unicode_ci&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${FITMIND_DB_USERNAME:root}
+    password: ${FITMIND_DB_PASSWORD:}
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+fitmind:
+  health:
+    calorie-low-threshold: 1200
+    protein-min-grams: 60
+    carbohydrate-min-grams: 120
+    fat-max-grams: 70
+  mimo:
+    api-key: "${MIMO_API_KEY:}"
+    base-url: "${MIMO_BASE_URL:}"
+    model: "${MIMO_MODEL:}"
+  qwen:
+    api-key: "${DASHSCOPE_API_KEY:}"
+    base-url: "${DASHSCOPE_BASE_URL:}"
+    model: "${DASHSCOPE_TEXT_MODEL:}"
+  assistant:
+    timeout-seconds: 45

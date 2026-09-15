@@ -1,0 +1,2 @@
+package com.fitmind.vo; import com.fitmind.entity.*; import com.fitmind.enums.WeightUnit; import lombok.Data; import java.math.BigDecimal; import java.util.*;
+@Data public class DashboardOverviewVO { private BigDecimal currentWeightKg; private BigDecimal startWeightKg; private BigDecimal targetWeightKg; private BigDecimal distanceToTargetKg; private BigDecimal change7dKg; private BigDecimal progressPercent; private WeightUnit preferredWeightUnit; private List<WeightRecord> weightTrend=Collections.emptyList(); private DailyHealthLetter todayHealthLetter; }

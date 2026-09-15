@@ -1,0 +1,1 @@
+package com.fitmind.mapper; import com.baomidou.mybatisplus.core.mapper.BaseMapper; import com.fitmind.entity.DailyHealthLetter; public interface DailyHealthLetterMapper extends BaseMapper<DailyHealthLetter> {}
