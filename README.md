@@ -121,7 +121,28 @@ Python 默认只读 MySQL，并把报告写入已忽略的 `python-data/reports/
 
 ## 项目截图
 
-> 截图区域已预留。公开版将使用脱敏演示数据重新截图；本地验收截图因包含个人健康记录，不纳入仓库。
+> 以下页面使用本地演示记录展示，健康与营养数据仅用于项目功能说明。
+
+### 数据总览
+
+![FitMind 数据总览](docs/images/dashboard.png)
+
+### 饮食记录与 AI 健康助手
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/meal-records.png" alt="FitMind 饮食记录与营养分析"></td>
+    <td width="50%"><img src="docs/images/ai-assistant.png" alt="FitMind AI 健康助手"></td>
+  </tr>
+  <tr>
+    <td align="center">饮食记录与营养分析</td>
+    <td align="center">基于真实记录的 AI 健康助手</td>
+  </tr>
+</table>
+
+### 身体画像
+
+![FitMind 身体画像](docs/images/body-profile.png)
 
 ## 安全说明
 
@@ -129,3 +150,4 @@ Python 默认只读 MySQL，并把报告写入已忽略的 `python-data/reports/
 - `ai-local.properties`、`.env`、日志、构建产物、数据质量报告和数据库导出均被忽略。
 - 示例配置只提供占位符；公开部署时应通过服务器环境变量或受控配置文件注入密钥。
 - 健康和营养输出仅用于项目演示与日常记录，不构成医学诊断或治疗建议。
+
